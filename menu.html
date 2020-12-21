@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico">
+    <!--Google Fonts-->
+    
+    <title>Pizzas "El zunzuncito"</title>
+</head>
+<body class="d-flex flex-column justify-content-center">
+    <header>
+        <!--NavBar-->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-danger">
+          <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+            <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+              <img src="img/colibri.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+              El Zunzuncito
+            </a>
+            <!--Solo logo al centro en mobile-->
+            <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+              <img src="img/colibri.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            </a>
+            <div class="w-100 text-right">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+        </div>
+          <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link m-2 menu-item">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" class="nav-link m-2 menu-item">Donde encontrarnos</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+    <main class="bg">
+      <div class="rect2">
+        <img src="img/napolitana.jpg" alt="">
+        <div class="box">
+          <h4>Pizza napolitana</h4>
+          <p>Sienta el delicioso aroma del buen tomate ligado con finas especias</p>
+          <a href="#"><button class="btn bg-danger">
+            Pedir >
+          </button>
+        </a> 
+        </div>
+      </div>
+      <div class="rect2">
+        <img src="img/pepperoni.jpeg" alt="">
+        <div class="box">
+          <h4>Pizza de Pepperoni</h4>
+          <p>No hay nada mejor que el sabor de un Pepperoni italiano bien acompañado</p>
+          <a href="#"><button class="btn bg-danger">
+            Pedir >
+          </button>
+        </a> 
+        </div>
+      </div>
+      <div class="rect2">
+        <img src="img/mango.jpg" alt="">
+        <div class="box">
+          <h4>Jugo de Mango</h4>
+          <p>Jugo fresco hecho cada mañana</p>
+          <a href="#"><button class="btn bg-danger">
+            Pedir >
+          </button>
+        </a> 
+        </div>
+      </div>
+        <div class="rect cuestionario">
+          <div class="box">
+            <h4>Quejas y sugerencias</h4>
+            <form>
+              <label for="correo">Correo</label><br>
+              <input type="text" id="correo" name="correo" placeholder="ejemplo@correo.com"><br>
+              <label for="sug">Sugerencias</label><br>
+              <input type="text" id="sug" name="sug" placeholder="Inserte su queja o sugerencia aqui"><br><br>
+              <a href="index.html">
+                <input type="submit" class="bg-danger text-white"value="Entregar">
+              </a>
+          </form>
+          </div>
+        </div>
+    </main>
+    <!-- Boton de chat que aparece en la versión de escritorio-->
+    <div class="oculto">
+      <h4>Quejas y sugerencias</h4>
+      <form>
+        <label for="correo">Correo</label><br>
+        <input type="text" id="correo" name="correo" placeholder="ejemplo@correo.com"><br>
+        <label for="sug">Sugerencias</label><br>
+        <input type="text" id="sug" name="sug" placeholder="Inserte su queja o sugerencia aqui"><br><br>
+        <a href="index.html">
+          <input type="submit" class="bg-danger text-white"value="Entregar">
+        </a>
+      </form>
+    </div>
+      <button class="btn my-2 my-sm-0 chat d-none d-md-inline-block"  id="chat" type="submit">
+        <span>
+          <i class="material-icons text-white">textsms</i>
+        </span>
+      </button>
+    
+</body>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $("#chat").click(function(){
+        $(".oculto").toggleClass("formulario");
+});
+    </script>
+</html>
